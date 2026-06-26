@@ -1,0 +1,61 @@
+erDiagram
+    Customers ||--o{ Bookings : makes
+    RoomTypes ||--o{ Rooms : categorizes
+    Rooms ||--o{ Bookings : reserved_for
+    Staff ||--o{ Bookings : handles
+    Bookings ||--|| Payments : has
+
+    Customers {
+        int customer_id PK
+        varchar first_name
+        varchar last_name
+        varchar email UK
+        varchar phone
+        varchar address
+        timestamp created_at
+    }
+
+    RoomTypes {
+        int room_type_id PK
+        varchar type_name UK
+        varchar description
+        decimal base_price
+        int max_guests
+    }
+
+    Rooms {
+        int room_id PK
+        varchar room_number UK
+        int room_type_id FK
+        int floor_number
+        varchar room_status
+    }
+
+    Staff {
+        int staff_id PK
+        varchar first_name
+        varchar last_name
+        varchar role
+        varchar email UK
+        varchar phone
+    }
+
+    Bookings {
+        int booking_id PK
+        int customer_id FK
+        int room_id FK
+        int staff_id FK
+        date check_in_date
+        date check_out_date
+        int number_of_guests
+        varchar booking_status
+    }
+
+    Payments {
+        int payment_id PK
+        int booking_id FK_UK
+        date payment_date
+        decimal amount
+        varchar payment_method
+        varchar payment_status
+    }
