@@ -1,6 +1,7 @@
 -- Hotel Reservation Database schema.
 -- We will build this step by step and explain each table before finalizing it.
 
+DROP DATABASE IF EXISTS hotel_reservation_db;
 CREATE DATABASE hotel_reservation_db;
 USE hotel_reservation_db;
 
