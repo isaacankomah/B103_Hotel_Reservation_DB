@@ -1,6 +1,8 @@
 -- Demonstration queries for the hotel reservation database.
 -- This file will include CRUD, joins, aggregations, and useful filters.
+
 USE hotel_reservation_db;
+
 -- Query 1: View all customers
 SELECT *
 FROM Customers;
@@ -53,10 +55,34 @@ UPDATE Bookings
 SET booking_status = 'Checked In'
 WHERE booking_id = 1;
 
+-- Confirm Query 6 result
+SELECT
+    booking_id,
+    booking_status
+FROM Bookings
+WHERE booking_id = 1;
+
 -- Query 7: Insert a new customer
 INSERT INTO Customers (first_name, last_name, email, phone, address)
 VALUES ('Yaw', 'Appiah', 'yaw.appiah@example.com', '0279998888', 'Tema, Ghana');
 
+-- Confirm Query 7 result
+SELECT
+    customer_id,
+    first_name,
+    last_name,
+    email,
+    phone,
+    address
+FROM Customers
+WHERE email = 'yaw.appiah@example.com';
+
 -- Query 8: Delete a customer record
 DELETE FROM Customers
+WHERE email = 'yaw.appiah@example.com';
+
+-- Confirm Query 8 result
+SELECT
+    COUNT(*) AS matching_customers_after_delete
+FROM Customers
 WHERE email = 'yaw.appiah@example.com';
