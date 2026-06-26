@@ -1,0 +1,10 @@
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Generated or temporary files
+tmp/
+*.log
+
+# Keep screenshots intentional; do not ignore screenshots/ by default.
