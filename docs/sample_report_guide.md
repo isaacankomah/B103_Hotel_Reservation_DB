@@ -7,9 +7,9 @@ section should contain, then rewrite the final report in your own words.
 
 ## First Page
 
-Student name: [Your full name]
+Student name: Isaac Ankomah
 
-Student ID: [Your student ID]
+Student ID: GH1056979
 
 Module: B103 Databases & Big Data
 

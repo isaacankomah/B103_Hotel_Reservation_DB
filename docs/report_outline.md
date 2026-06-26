@@ -4,8 +4,8 @@ Complete each section in your own words after we build and test the database.
 
 ## First Page
 
-- Full name:
-- Student ID:
+- Full name: Isaac Ankomah
+- Student ID: GH1056979
 - Module: B103 Databases & Big Data
 - Project title: Hotel Reservation Database Management System
 - GitHub repository link:
